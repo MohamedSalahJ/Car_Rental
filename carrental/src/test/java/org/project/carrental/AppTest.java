@@ -1,4 +1,4 @@
-package org.project;
+package org.project.carrental;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
