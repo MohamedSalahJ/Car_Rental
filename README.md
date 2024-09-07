@@ -49,7 +49,5 @@ The `Order` class represents a car rental order made by a user. It contains the 
 - **Order management**: Create methods for managing rental orders, including payment processing and rental history.
 
 ## How to Run the Project
+# Clone the repository
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourUsername/Car_Rental.git

@@ -10,25 +10,25 @@ public class Car {
 
     private String carReleaseYear;
 
-    private String carColorString;
+    private String carColor;
 
     private String carCompany;
 
     public Car() {
     }
 
-    public Car(long id, String carModel, String carReleaseYear, String carColorString, String carCompany) {
+    public Car(long id, String carModel, String carReleaseYear, String carColor, String carCompany) {
         this.id = id;
         this.carModel = carModel;
         this.carReleaseYear = carReleaseYear;
-        this.carColorString = carColorString;
+        this.carColor = carColor;
         this.carCompany = carCompany;
     }
 
-    public Car(String carModel, String carReleaseYear, String carColorString, String carCompany) {
+    public Car(String carModel, String carReleaseYear, String carColor, String carCompany) {
         this.carModel = carModel;
         this.carReleaseYear = carReleaseYear;
-        this.carColorString = carColorString;
+        this.carColor = carColor;
         this.carCompany = carCompany;
     }
 
@@ -56,12 +56,12 @@ public class Car {
         this.carReleaseYear = carReleaseYear;
     }
 
-    public String getCarColorString() {
-        return carColorString;
+    public String getCarColor() {
+        return carColor;
     }
 
-    public void setCarColorString(String carColorString) {
-        this.carColorString = carColorString;
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
     }
 
     public String getCarCompany() {
@@ -79,7 +79,7 @@ public class Car {
                 "id=" + id +
                 ", carModel='" + carModel + '\'' +
                 ", carReleaseYear='" + carReleaseYear + '\'' +
-                ", carColorString='" + carColorString + '\'' +
+                ", carColor='" + carColor + '\'' +
                 ", carCompany='" + carCompany + '\'' +
                 '}';
     }
@@ -90,12 +90,15 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return id == car.id && Objects.equals(carModel, car.carModel) && Objects.equals(carReleaseYear, car.carReleaseYear) && Objects.equals(carColorString, car.carColorString) && Objects.equals(carCompany, car.carCompany);
+        return id == car.id && Objects.equals(carModel, car.carModel) &&
+                Objects.equals(carReleaseYear, car.carReleaseYear)
+                && Objects.equals(carColor, car.carColor) && Objects.equals(carCompany, car.carCompany);
     }
 
     //HashCode
     @Override
     public int hashCode() {
-        return Objects.hash(id, carModel, carReleaseYear, carColorString, carCompany);
+        return Objects.hash(id, carModel, carReleaseYear,
+                carColor, carCompany);
     }
 }

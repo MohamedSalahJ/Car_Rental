@@ -17,12 +17,12 @@ public class Order {
 
     private boolean carRetruned;
 
-    private BigDecimal rentalCost;
+    private double rentalCost;
 
     public Order() {
     }
 
-    public Order(long id, long userId, long carId, Date orderDate, Date returnDate, boolean carRetruned, BigDecimal rentalCost) {
+    public Order(long id, long userId, long carId, Date orderDate, Date returnDate, boolean carRetruned, double rentalCost) {
         this.id = id;
         this.userId = userId;
         this.carId = carId;
@@ -32,7 +32,7 @@ public class Order {
         this.rentalCost = rentalCost;
     }
 
-    public Order(long userId, long carId, Date orderDate, Date returnDate, boolean carRetruned, BigDecimal rentalCost) {
+    public Order(long userId, long carId, Date orderDate, Date returnDate, boolean carRetruned, double rentalCost) {
         this.userId = userId;
         this.carId = carId;
         this.orderDate = orderDate;
@@ -89,11 +89,11 @@ public class Order {
         this.carRetruned = carRetruned;
     }
 
-    public BigDecimal getRentalCost() {
+    public double getRentalCost() {
         return rentalCost;
     }
 
-    public void setRentalCost(BigDecimal rentalCost) {
+    public void setRentalCost(double rentalCost) {
         this.rentalCost = rentalCost;
     }
 
