@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package org.project.carrental.mode.dao.impl;
 
 import org.apache.logging.log4j.LogManager;
