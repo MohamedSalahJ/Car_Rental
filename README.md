@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a basic **Car Rental Management System** that allows users to rent cars. The system manages user accounts, cars available for rent, and rental orders. This initial version of the project contains three main classes: `User`, `Car`, and `Order`.
+This project is a **Car Rental Management System** designed to manage users, cars, and rental orders. The project follows the DAO (Data Access Object) pattern to abstract the interaction with the data source. It includes implementations for managing the `User`, `Car`, and `Order` entities, making it easy to perform CRUD operations (Create, Read, Update, Delete) on these entities.
 
 ## Project Structure
 
@@ -26,10 +26,6 @@ The `Car` class represents a car that can be rented. It contains the following f
 - `carColorString`: The color of the car.
 - `carCompany`: The car manufacturer (company name).
 
-##### Constructor:
-- Default constructor: `Car()`
-- Parameterized constructor: `Car(long id, String carModel, String carReleaseYear, String carColorString, String carCompany)`
-
 #### 3. **Order Class**
 The `Order` class represents a car rental order made by a user. It contains the following fields:
 - `id`: A unique identifier for each order.
@@ -40,14 +36,31 @@ The `Order` class represents a car rental order made by a user. It contains the 
 - `carReturned`: A boolean indicating whether the car has been returned.
 - `rentalCost`: The total cost of renting the car.
 
-##### Constructor:
-- Default constructor: `Order()`
+### DAO Pattern
 
-## Future Enhancements
-- **User authentication**: Implement user login and registration.
-- **Car availability**: Add features to track the availability of cars for rent.
-- **Order management**: Create methods for managing rental orders, including payment processing and rental history.
+The project follows the DAO (Data Access Object) pattern to handle database operations for each entity. The `GenericDAO` interface defines the methods to be implemented by each entity-specific DAO class (`UserDAO`, `CarDAO`, `OrderDAO`).
 
-## How to Run the Project
-# Clone the repository
+#### GenericDAO Interface
+This interface provides basic CRUD operations:
+- `insertItem(T item)`: Inserts a new item into the database.
+- `getAllItems()`: Retrieves all items from the database.
+- `getItem(long id)`: Retrieves a single item by its ID.
+- `updateItem(T item)`: Updates an existing item in the database.
+- `deleteItem(long id)`: Deletes an item from the database by its ID.
 
+#### DAO Implementations
+
+##### **UserDAO**
+The `UserDAO` class implements `GenericDAO<User>` to perform CRUD operations for the `User` entity.
+
+##### **CarDAO**
+The `CarDAO` class implements `GenericDAO<Car>` to perform CRUD operations for the `Car` entity.
+
+##### **OrderDAO**
+The `OrderDAO` class implements `GenericDAO<Order>` to perform CRUD operations for the `Order` entity.
+
+### How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YourUsername/Car_Rental.git
