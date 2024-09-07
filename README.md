@@ -59,6 +59,14 @@ The `CarDAO` class implements `GenericDAO<Car>` to perform CRUD operations for t
 ##### **OrderDAO**
 The `OrderDAO` class implements `GenericDAO<Order>` to perform CRUD operations for the `Order` entity.
 
+### PropertiesFile to setup your postgresql database
+jdbc.url=jdbc:mysql://localhost:5432/car_rental_db
+jdbc.username=your_username
+jdbc.password=your_password
+jdbc.driver-class-name=com.mysql.cj.jdbc.Driver
+
+
+
 ### How to Run the Project
 
 1. Clone the repository:

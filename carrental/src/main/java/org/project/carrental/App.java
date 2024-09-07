@@ -1,5 +1,7 @@
 package org.project.carrental;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.project.carrental.entity.Car;
 import org.project.carrental.entity.User;
 import org.project.carrental.entity.UserRole;
@@ -14,6 +16,8 @@ import java.util.Properties;
  */
 public class App 
 {
+    private  static final Logger logger=LogManager.getLogger();
+
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
@@ -30,7 +34,7 @@ public class App
                     ,properties.getProperty("postgressql.password"));
             System.out.println("Connection Successfully");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            logger.error(e);
         }
 
 
