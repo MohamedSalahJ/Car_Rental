@@ -18,6 +18,7 @@ public class PropertiesReader {
         Properties properties=new Properties();
 try(BufferedReader reader=new BufferedReader(new FileReader(filepath))){
     System.out.println(reader);
+    properties.load(reader);
     logger.info("Done Reading From The File:" +filepath);
 } catch (FileNotFoundException e) {
     logger.error("Error Reading From File: "+filepath+e);
