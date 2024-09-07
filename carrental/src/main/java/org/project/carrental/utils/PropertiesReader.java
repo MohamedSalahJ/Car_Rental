@@ -2,12 +2,11 @@ package org.project.carrental.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.*;
+
 import java.util.Properties;
 
 public class PropertiesReader {
@@ -17,7 +16,6 @@ public class PropertiesReader {
 
         Properties properties=new Properties();
 try(BufferedReader reader=new BufferedReader(new FileReader(filepath))){
-    System.out.println(reader);
     properties.load(reader);
     logger.info("Done Reading From The File:" +filepath);
 } catch (FileNotFoundException e) {
