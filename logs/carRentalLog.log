@@ -1,0 +1,4 @@
+# 2024-09-07 22:28:52.349 [main] [INFO] { org.project.carrental.utils.PropertiesReader.getProperties(PropertiesReader.java:21) } - Done Reading From The File:D:\hibernate review\CarRental\Car_Rental\carrental\src\main\resources\dbconnection.properties
+# 2024-09-07 22:28:53.398 [main] [INFO] { org.project.carrental.config.DBConnection.getConnetion(DBConnection.java:46) } - Connected to car_rental database
+# 2024-09-07 22:31:17.027 [main] [INFO] { org.project.carrental.utils.PropertiesReader.getProperties(PropertiesReader.java:21) } - Done Reading From The File:D:\hibernate review\CarRental\Car_Rental\carrental\src\main\resources\dbconnection.properties
+# 2024-09-07 22:31:17.325 [main] [INFO] { org.project.carrental.config.DBConnection.getConnetion(DBConnection.java:46) } - Connected to car_rental database
