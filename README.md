@@ -140,7 +140,7 @@ jdbc.url=jdbc:mysql://localhost:5432/car_rental_db.
 jdbc.username=your_username.
 jdbc.password=your_password.
 jdbc.driver-class-name=com.mysql.cj.jdbc.Driver.
-
+### add test configuration to test functions of user DAO using flyway,datasource,embedded database 
 
 
 ### How to Run the Project
@@ -148,4 +148,4 @@ jdbc.driver-class-name=com.mysql.cj.jdbc.Driver.
 1. Clone the repository:
    ```bash
    git clone https://github.com/YourUsername/Car_Rental.git
->>>>>>> 97e1aa01ed5a79ab7b921766b174b03666b83690
+
