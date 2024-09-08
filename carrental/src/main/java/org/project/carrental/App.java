@@ -3,7 +3,7 @@ package org.project.carrental;
 
 import org.project.carrental.entity.User;
 import org.project.carrental.entity.UserRole;
-import org.project.carrental.mode.dao.impl.userDAO;
+import org.project.carrental.model.dao.impl.userDAO;
 
 import java.util.List;
 

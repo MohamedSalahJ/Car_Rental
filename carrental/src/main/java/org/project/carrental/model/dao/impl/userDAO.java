@@ -1,12 +1,12 @@
 
-package org.project.carrental.mode.dao.impl;
+package org.project.carrental.model.dao.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.project.carrental.config.DBConnection;
+import org.project.carrental.config.DBTestConnection;
 import org.project.carrental.entity.User;
 import org.project.carrental.entity.UserRole;
-import org.project.carrental.mode.dao.GenericDAO;
+import org.project.carrental.model.dao.GenericDAO;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -15,12 +15,20 @@ import java.util.List;
 public class userDAO implements GenericDAO<User> {
     private final static Logger logger= LogManager.getLogger();
     private static final String DELETE_USER_BYID = "DELETE from user_table where user_id=?";
-    private  Connection con=new DBConnection().getConnetion();
+    private  Connection con;
     private static final String INSERT_USER="INSERT INTO user_table" +
          " (user_name,user_email,user_password,user_address,user_blocked,user_role)" +
          "VALUES(?,?,?,?,?,?)";
     private static final String UPDATE_USER="update user_table set user_name=? where user_id=?";
     private static final String sql = "Select * from user_table ";
+
+    public userDAO(){
+        con=new DBTestConnection().getConnetion();
+    }
+    public userDAO(Connection con) {
+        this.con = con;
+    }
+
     @Override
     public int insertItem(User item) {
         try {

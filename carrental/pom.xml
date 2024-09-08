@@ -36,10 +36,43 @@
     </dependency>
 
     <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.36</version> <!-- Compatible version for SLF4J -->
+    </dependency>
+
+    <!-- =============================== TESTING =============================== -->
+
+
+
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>5.2.4</version> <!-- Stable version -->
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version> <!-- Updated JUnit version for better compatibility -->
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.opentable.components/otj-pg-embedded -->
+
+    <!-- https://mvnrepository.com/artifact/com.opentable.components/otj-pg-embedded -->
+    <dependency>
+      <groupId>com.opentable.components</groupId>
+      <artifactId>otj-pg-embedded</artifactId>
+      <version>1.1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.opentable.components</groupId>
+      <artifactId>otj-pg-embedded</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+
   </dependencies>
 </project>

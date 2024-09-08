@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DBConnection {
+public class DBTestConnection {
 
     private  static final Logger logger= LogManager.getLogger();
     private  static final String PROPERTIES_DB_FILE="D:\\hibernate review\\CarRental\\Car_Rental\\carrental\\src\\main\\resources\\dbconnection.properties";
@@ -27,7 +27,7 @@ public class DBConnection {
 
 
 
-    public DBConnection() {
+    public DBTestConnection() {
         Properties properties= PropertiesReader.getProperties(PROPERTIES_DB_FILE);
         databaseUrl=properties.getProperty(URL);
 
